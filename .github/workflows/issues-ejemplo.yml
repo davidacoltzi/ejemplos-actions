@@ -1,0 +1,12 @@
+name: Issues ejemplo
+
+on: 
+  issues: 
+    types: [opened]
+
+jobs:
+  procesa-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Muestra el título del issue
+        run: echo "El título del issue es ${{ github.evet.issue.title }}"
